@@ -1,23 +1,47 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>{% block title %}Bonga Learns{% endblock %}</title>
+    <meta charset="utf-8" http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>{% block title %}{% trans "Bonga Learns" %}{% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
-        <a href="/" class="logo">Bonga Learns</a>
+        <a href="/" class="logo">{% trans "Bonga Learns" %}</a>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
         <ul class="menu">
             {% if request.user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Sign out</a></li>
+            <li><a href="{% url 'logout' %}">{% trans "Sign out" %}</a></li>
             {% else %}
-            <li><a href="{% url 'login' %}">Sign in</a></li>
+            <li><a href="{% url 'login' %}">{% trans "Sign in" %}</a></li>
             {% endif %}
         </ul>
+        <div class="languages">
+            <p>{% trans "Language" %}:</p>
+            <ul class="languages">
+                {% for language in languages %}
+                    <li> 
+                        <a href="/{{ language.code }}/"
+                            {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                            {% if language.code == "zh-hans" %}
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1280px-Flag_of_the_People%27s_Republic_of_China.svg.png" />
+                            {% elif language.code == "ru" %}
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png" />
+                            {% elif language.code == "en" %}
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1920px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" />
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
     </div>
     <div id="content">
         {% block content %}

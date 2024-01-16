@@ -75,9 +75,10 @@ h1 {
 
 #header .menu {
     list-style: none;
-    float: right;
+    float: inline-end;
     margin: 0;
     padding: 0;
+
 }
 
 .contents {
@@ -331,4 +332,33 @@ ul#course-modules li:hover {
     margin-right: 2%;
     padding-left: 0;
     padding-right: 0;
+}
+.languages {
+    float:right;
+    margin: 0;
+    padding: 0;
+    padding-right: 24px;
+}
+
+.languages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.languages ul li {
+    float: left;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+}
+
+.languages p {
+    float: left;
+    margin: 0;
+}
+.languages ul li a img {
+    padding-top: 4px;
+    width:22px;
+    height: 14px;
 }

@@ -31,6 +31,7 @@ urlpatterns = [
     path("students/", include("students.urls")),
     path("api/", include("courses.api.urls", namespace="api")),
     path("chat/", include("chat.urls", namespace="chat")),
+    path("rosetta/", include("rosetta.urls")),
     path("", CourseListView.as_view(), name="course_list"),
 ]
 if settings.DEBUG:

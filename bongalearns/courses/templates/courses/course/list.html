@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block title %}
     {% if subject %}
-        {{ subject.title }} courses
+        {{ subject.title }} {% trans "courses" %}
     {% else %}
-        All courses
+    {% trans "All courses" %} 
     {% endif %}
 {% endblock %}
 
 {% block content %}
     <h1>
         {% if subject %}
-            {{ subject.title }} courses
+            {{ subject.title }} {% trans "courses" %}
         {% else %}
-            All courses
+        {% trans "All courses" %}
         {% endif %}
     </h1>
     <div class="contents">
-        <h3>Subjects</h3>
+        <h3>{% trans "Subjects" %}</h3>
         <ul id="modules">
             <li {% if not subject %}class="selected"{% endif %}>
-                <a href="{% url 'course_list' %}">All</a>
+                <a href="{% url 'course_list' %}">{% trans "All" %}</a>
             </li>
             {% for s in subjects %}
                 <li {% if subject == s %}class="selected"{% endif %}>
@@ -28,7 +28,7 @@
                         {{ s.title }}
                         <br>
                         <span>
-                            {{ s.total_courses }} course{{ s.total_courses|pluralize }}
+                            {% trans "courses" %}: {{ s.total_courses }} 
                         </span>
                     </a>
                 </li>
@@ -45,8 +45,8 @@
                 </h3>
                 <p>
                     <a href="{% url 'course_detail' course.slug %}">{{ subject }}</a>.
-                    {{ course.total_modules}} modules.
-                    Instructor: {{ course.owner.get_full_name }}
+                    {% trans "Modules" %}: {{ course.total_modules}}.
+                    {% trans "Instructor" %}: {{ course.owner.get_full_name }}
                 </p>
             {% endwith %}
         {% endfor %}
