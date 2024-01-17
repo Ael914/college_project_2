@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 04:29+0000\n"
-"PO-Revision-Date: 2024-01-17 04:33+0000\n"
+"POT-Creation-Date: 2024-01-17 17:01+0700\n"
+"PO-Revision-Date: 2024-01-17 17:02+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,309 +19,308 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: bongalearns/settings.py:149
+#: .\bongalearns\settings.py:149
 msgid "English"
 msgstr "Аглийский"
 
-#: bongalearns/settings.py:149
+#: .\bongalearns\settings.py:150
 msgid "Russian"
 msgstr "Великорусский"
 
-#: bongalearns/settings.py:149
+#: .\bongalearns\settings.py:151
 msgid "Chinese"
 msgstr "Нипанимать хазяина"
 
-#: courses/models.py:12 courses/models.py:29 courses/models.py:44
-#: courses/models.py:83
+#: .\chat\templates\chat\room.html:10
+msgid "Send"
+msgstr "Отправить"
+
+#: .\courses\models.py:13 .\courses\models.py:30 .\courses\models.py:47
+#: .\courses\models.py:86
 msgid "title"
 msgstr "заголовок"
 
-#: courses/models.py:31
+#: .\courses\models.py:33
 msgid "overview"
 msgstr "обзор"
 
-#: courses/models.py:32 courses/models.py:84
+#: .\courses\models.py:35
 msgid "created"
 msgstr "создано"
 
-#: courses/models.py:45
+#: .\courses\models.py:48
 msgid "description"
 msgstr "описание"
 
-#: courses/models.py:85
-msgid "updated"
-msgstr "обновлено"
-
-#: courses/models.py:101
+#: .\courses\models.py:105
 msgid "content"
 msgstr "содержание"
 
-#: courses/templates/base.html:9 courses/templates/base.html:15
+#: .\courses\templates\base.html:9 .\courses\templates\base.html:18
 msgid "Bonga Learns"
-msgstr ""
+msgstr "Bonga Learns"
 
-#: courses/templates/base.html:21
+#: .\courses\templates\base.html:21
 msgid "Sign out"
 msgstr "Выйти из аккаунта"
 
-#: courses/templates/base.html:23
+#: .\courses\templates\base.html:23
 msgid "Sign in"
 msgstr "Войти в аккаунт"
 
-#: courses/templates/base.html:28
+#: .\courses\templates\base.html:28
 msgid "Language"
 msgstr "Язык"
 
-#: courses/templates/base.html:48
+#: .\courses\templates\base.html:48
 msgid "Manage courses"
 msgstr "Управление курсами"
 
-#: courses/templates/base.html:50
-#: courses/templates/courses/manage/course/list.html:3
-#: courses/templates/courses/manage/course/list.html:6
-#: students/templates/students/course/list.html:3
-#: students/templates/students/course/list.html:6
+#: .\courses\templates\base.html:51
+#: .\courses\templates\courses\manage\course\list.html:3
+#: .\courses\templates\courses\manage\course\list.html:6
+#: .\students\templates\students\course\list.html:4
+#: .\students\templates\students\course\list.html:7
 msgid "My courses"
 msgstr "Мои курсы"
 
-#: courses/templates/courses/content/file.html:3
+#: .\courses\templates\courses\content\file.html:3
 msgid "Download file"
 msgstr "Скачать файл"
 
-#: courses/templates/courses/course/detail.html:13
+#: .\courses\templates\courses\course\detail.html:13
 msgid "Overview"
 msgstr "Обзор"
 
-#: courses/templates/courses/course/detail.html:18
-#: courses/templates/courses/course/list.html:48
-#: courses/templates/courses/manage/module/content_list.html:12
-#: students/templates/students/course/detail.html:13
+#: .\courses\templates\courses\course\detail.html:18
+#: .\courses\templates\courses\course\list.html:48
+#: .\courses\templates\courses\manage\module\content_list.html:12
+#: .\students\templates\students\course\detail.html:13
 msgid "Modules"
 msgstr "Модули"
 
-#: courses/templates/courses/course/detail.html:19
-#: courses/templates/courses/course/list.html:49
+#: .\courses\templates\courses\course\detail.html:19
+#: .\courses\templates\courses\course\list.html:49
 msgid "Instructor"
 msgstr "Учитель"
 
-#: courses/templates/courses/course/detail.html:26
+#: .\courses\templates\courses\course\detail.html:26
 msgid "Enroll now"
 msgstr "Записаться сейчас"
 
-#: courses/templates/courses/course/detail.html:30
+#: .\courses\templates\courses\course\detail.html:30
 msgid "Register to enroll"
 msgstr "Зарегистрируйтесь, чтобы записаться"
 
-#: courses/templates/courses/course/list.html:5
-#: courses/templates/courses/course/list.html:14
-#: courses/templates/courses/course/list.html:31
+#: .\courses\templates\courses\course\list.html:5
+#: .\courses\templates\courses\course\list.html:14
+#: .\courses\templates\courses\course\list.html:31
 msgid "courses"
 msgstr "курсы"
 
-#: courses/templates/courses/course/list.html:7
-#: courses/templates/courses/course/list.html:16
+#: .\courses\templates\courses\course\list.html:7
+#: .\courses\templates\courses\course\list.html:16
 msgid "All courses"
 msgstr "Все курсы"
 
-#: courses/templates/courses/course/list.html:20
+#: .\courses\templates\courses\course\list.html:20
 msgid "Subjects"
 msgstr "Предметы"
 
-#: courses/templates/courses/course/list.html:23
+#: .\courses\templates\courses\course\list.html:23
 msgid "All"
 msgstr "Все"
 
-#: courses/templates/courses/manage/content/form.html:5
-#: courses/templates/courses/manage/content/form.html:14
+#: .\courses\templates\courses\manage\content\form.html:5
+#: .\courses\templates\courses\manage\content\form.html:14
 msgid "Edit content"
 msgstr "Поменять содержание"
 
-#: courses/templates/courses/manage/content/form.html:7
-#: courses/templates/courses/manage/content/form.html:16
-#: courses/templates/courses/manage/module/content_list.html:51
+#: .\courses\templates\courses\manage\content\form.html:7
+#: .\courses\templates\courses\manage\content\form.html:16
+#: .\courses\templates\courses\manage\module\content_list.html:51
 msgid "Add new content"
 msgstr "Добавить новое содержание"
 
-#: courses/templates/courses/manage/content/form.html:20
-#: courses/templates/courses/manage/course/form.html:20
+#: .\courses\templates\courses\manage\content\form.html:20
+#: .\courses\templates\courses\manage\course\form.html:20
 msgid "Course info"
 msgstr "Информация о курсу"
 
-#: courses/templates/courses/manage/content/form.html:24
+#: .\courses\templates\courses\manage\content\form.html:24
 msgid "Save content"
 msgstr "Сохранить"
 
-#: courses/templates/courses/manage/course/delete.html:3
-#: courses/templates/courses/manage/course/delete.html:6
+#: .\courses\templates\courses\manage\course\delete.html:3
+#: .\courses\templates\courses\manage\course\delete.html:6
 msgid "Delete course"
 msgstr "Удалить курс"
 
-#: courses/templates/courses/manage/course/delete.html:10
+#: .\courses\templates\courses\manage\course\delete.html:10
 msgid "Are you sure you want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
-#: courses/templates/courses/manage/course/delete.html:11
+#: .\courses\templates\courses\manage\course\delete.html:11
 msgid "Confirm"
 msgstr "Подтвердить"
 
-#: courses/templates/courses/manage/course/form.html:5
-#: courses/templates/courses/manage/course/form.html:14
+#: .\courses\templates\courses\manage\course\form.html:5
+#: .\courses\templates\courses\manage\course\form.html:14
 msgid "Edit course"
 msgstr "Изменить курс"
 
-#: courses/templates/courses/manage/course/form.html:7
-#: courses/templates/courses/manage/course/form.html:16
+#: .\courses\templates\courses\manage\course\form.html:7
+#: .\courses\templates\courses\manage\course\form.html:16
 msgid "Create a new course"
 msgstr "Создать новый курс"
 
-#: courses/templates/courses/manage/course/form.html:24
+#: .\courses\templates\courses\manage\course\form.html:24
 msgid "Save course"
 msgstr "Сохранить курс"
 
-#: courses/templates/courses/manage/course/list.html:12
-#: courses/templates/courses/manage/module/content_list.html:39
-#: courses/templates/courses/manage/module/formset.html:4
-#: courses/templates/courses/manage/module/formset.html:8
+#: .\courses\templates\courses\manage\course\list.html:12
+#: .\courses\templates\courses\manage\module\content_list.html:39
+#: .\courses\templates\courses\manage\module\formset.html:4
+#: .\courses\templates\courses\manage\module\formset.html:8
 msgid "Edit"
 msgstr "Изменить"
 
-#: courses/templates/courses/manage/course/list.html:13
-#: courses/templates/courses/manage/module/content_list.html:42
+#: .\courses\templates\courses\manage\course\list.html:13
+#: .\courses\templates\courses\manage\module\content_list.html:42
 msgid "Delete"
 msgstr "Удалить"
 
-#: courses/templates/courses/manage/course/list.html:14
-#: courses/templates/courses/manage/module/content_list.html:28
+#: .\courses\templates\courses\manage\course\list.html:14
+#: .\courses\templates\courses\manage\module\content_list.html:28
 msgid "Edit modules"
 msgstr "Изменить модули"
 
-#: courses/templates/courses/manage/course/list.html:17
+#: .\courses\templates\courses\manage\course\list.html:17
 msgid "Manage contents"
 msgstr "Управление содержимым"
 
-#: courses/templates/courses/manage/course/list.html:23
+#: .\courses\templates\courses\manage\course\list.html:23
 msgid "You haven't created any courses yet"
 msgstr "Вы пока не создали ни одного курса"
 
-#: courses/templates/courses/manage/course/list.html:26
+#: .\courses\templates\courses\manage\course\list.html:26
 msgid "Create new course"
 msgstr "Создать новый курс"
 
-#: courses/templates/courses/manage/module/content_list.html:5
-#: courses/templates/courses/manage/module/content_list.html:18
-#: courses/templates/courses/manage/module/content_list.html:31
-#: students/templates/students/course/detail.html:19
+#: .\courses\templates\courses\manage\module\content_list.html:5
+#: .\courses\templates\courses\manage\module\content_list.html:18
+#: .\courses\templates\courses\manage\module\content_list.html:31
+#: .\students\templates\students\course\detail.html:19
 msgid "Module"
 msgstr "Модуль"
 
-#: courses/templates/courses/manage/module/content_list.html:10
+#: .\courses\templates\courses\manage\module\content_list.html:10
 msgid "Course"
 msgstr "Курс"
 
-#: courses/templates/courses/manage/module/content_list.html:25
-#: students/templates/students/course/detail.html:26
+#: .\courses\templates\courses\manage\module\content_list.html:25
+#: .\students\templates\students\course\detail.html:26
 msgid "No modules yet"
 msgstr "Нет модулей"
 
-#: courses/templates/courses/manage/module/content_list.html:32
+#: .\courses\templates\courses\manage\module\content_list.html:32
 msgid "Module contents"
 msgstr "Содержание модуля"
 
-#: courses/templates/courses/manage/module/content_list.html:48
+#: .\courses\templates\courses\manage\module\content_list.html:48
 msgid "This module has no contents yet"
 msgstr "В модуле еще нет содержания"
 
-#: courses/templates/courses/manage/module/content_list.html:55
+#: .\courses\templates\courses\manage\module\content_list.html:55
 msgid "Text"
 msgstr "Текст"
 
-#: courses/templates/courses/manage/module/content_list.html:60
+#: .\courses\templates\courses\manage\module\content_list.html:60
 msgid "Image"
 msgstr "Фото"
 
-#: courses/templates/courses/manage/module/content_list.html:65
+#: .\courses\templates\courses\manage\module\content_list.html:65
 msgid "Video"
 msgstr "Видео"
 
-#: courses/templates/courses/manage/module/content_list.html:70
+#: .\courses\templates\courses\manage\module\content_list.html:70
 msgid "File"
 msgstr "Филе"
 
-#: courses/templates/courses/manage/module/formset.html:10
+#: .\courses\templates\courses\manage\module\formset.html:10
 msgid "Course modules"
 msgstr "Модули курса"
 
-#: courses/templates/courses/manage/module/formset.html:15
+#: .\courses\templates\courses\manage\module\formset.html:15
 msgid "Save modules"
 msgstr "Сохранить модули"
 
-#: courses/templates/registration/logged_out.html:4
-#: courses/templates/registration/logged_out.html:7
+#: .\courses\templates\registration\logged_out.html:3
+#: .\courses\templates\registration\logged_out.html:6
 msgid "Logged out"
 msgstr "Выход из аккаунта"
 
-#: courses/templates/registration/logged_out.html:10
+#: .\courses\templates\registration\logged_out.html:9
 msgid "You have been successfully logged out"
 msgstr "Вы успешно вышли из аккаунта"
 
-#: courses/templates/registration/logged_out.html:11
+#: .\courses\templates\registration\logged_out.html:10
 msgid "You can"
 msgstr "Вы можете"
 
-#: courses/templates/registration/logged_out.html:11
+#: .\courses\templates\registration\logged_out.html:10
 msgid "Log-in again"
 msgstr "войти в аккаунт снова"
 
-#: courses/templates/registration/login.html:4
-#: courses/templates/registration/login.html:7
-#: courses/templates/registration/login.html:19
+#: .\courses\templates\registration\login.html:3
+#: .\courses\templates\registration\login.html:6
+#: .\courses\templates\registration\login.html:19
 msgid "Log-in"
 msgstr "Войти в аккаунт"
 
-#: courses/templates/registration/login.html:10
+#: .\courses\templates\registration\login.html:9
 msgid "Your username and password didn't match. Please try again"
 msgstr "Ваши логин или пароль не подходят. Пожалуйста, попробуйте снова "
 
-#: courses/templates/registration/login.html:12
+#: .\courses\templates\registration\login.html:11
 msgid "Please, use the following form to log-in"
 msgstr "Пожалуйста, используйте следующую форму для входа в аккаунт"
 
-#: students/templates/students/course/detail.html:31
+#: .\students\templates\students\course\detail.html:31
 msgid "Course chat room"
 msgstr "Чат курса"
 
-#: students/templates/students/course/list.html:12
-#| msgid "Manage contents"
+#: .\students\templates\students\course\list.html:13
 msgid "Access contents"
 msgstr "Просмотр содержимого"
 
-#: students/templates/students/course/list.html:17
-#| msgid "You haven't created any courses yet"
+#: .\students\templates\students\course\list.html:18
 msgid "You are not enrolled in any courses yet"
 msgstr "Вы пока не создали ни одного курса"
 
-#: students/templates/students/course/list.html:18
-#| msgid "My courses"
+#: .\students\templates\students\course\list.html:19
 msgid "Browse courses"
 msgstr "Просмотр курсов"
 
-#: students/templates/students/course/list.html:19
+#: .\students\templates\students\course\list.html:20
 msgid "to enroll on a course"
 msgstr "чтобы записаться на курс"
 
-#: students/templates/students/student/registration.html:9
-#| msgid "Sign out"
+#: .\students\templates\students\student\registration.html:5
+#: .\students\templates\students\student\registration.html:10
 msgid "Sign up"
 msgstr "Зарегистрироваться "
 
-#: students/templates/students/student/registration.html:12
+#: .\students\templates\students\student\registration.html:13
 msgid "Enter your details to create an account"
 msgstr "Введите свои данные, чтобы создать аккаунт"
 
-#: students/templates/students/student/registration.html:17
-#| msgid "Create new course"
+#: .\students\templates\students\student\registration.html:18
 msgid "Create my account"
 msgstr "Создать мой аккаунт"
+
+#~ msgid "updated"
+#~ msgstr "обновлено"
 
 #~ msgid "modules"
 #~ msgstr "модули"
