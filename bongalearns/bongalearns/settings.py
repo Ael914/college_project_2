@@ -36,8 +36,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "daphne",
     "courses.apps.CoursesConfig",
-    "super_inlines",
-    "modeltranslation",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
