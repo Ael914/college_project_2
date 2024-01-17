@@ -8,267 +8,317 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 02:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-01-17 04:29+0000\n"
+"PO-Revision-Date: 2024-01-17 04:38+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: bongalearns/settings.py:147
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: bongalearns/settings.py:149
 msgid "English"
-msgstr ""
+msgstr "英语"
 
-#: bongalearns/settings.py:147
+#: bongalearns/settings.py:149
 msgid "Russian"
-msgstr ""
+msgstr "俄语"
 
-#: bongalearns/settings.py:147
+#: bongalearns/settings.py:149
 msgid "Chinese"
-msgstr ""
+msgstr "中国人"
 
 #: courses/models.py:12 courses/models.py:29 courses/models.py:44
 #: courses/models.py:83
 msgid "title"
-msgstr ""
+msgstr "标题"
 
 #: courses/models.py:31
 msgid "overview"
-msgstr ""
+msgstr "概述"
 
 #: courses/models.py:32 courses/models.py:84
 msgid "created"
-msgstr ""
+msgstr "已创建"
 
 #: courses/models.py:45
 msgid "description"
-msgstr ""
+msgstr "描述"
 
 #: courses/models.py:85
 msgid "updated"
-msgstr ""
+msgstr "更新"
 
 #: courses/models.py:101
 msgid "content"
-msgstr ""
+msgstr "内容"
 
-#: courses/templates/base.html:8 courses/templates/base.html:14
+#: courses/templates/base.html:9 courses/templates/base.html:15
 msgid "Bonga Learns"
-msgstr ""
+msgstr "肏妹"
 
-#: courses/templates/base.html:20
+#: courses/templates/base.html:21
 msgid "Sign out"
-msgstr ""
+msgstr "登出"
 
-#: courses/templates/base.html:22
+#: courses/templates/base.html:23
 msgid "Sign in"
-msgstr ""
+msgstr "登入"
 
-#: courses/templates/base.html:26
+#: courses/templates/base.html:28
 msgid "Language"
-msgstr ""
+msgstr "语言"
+
+#: courses/templates/base.html:48
+msgid "Manage courses"
+msgstr "管理课程"
+
+#: courses/templates/base.html:50
+#: courses/templates/courses/manage/course/list.html:3
+#: courses/templates/courses/manage/course/list.html:6
+#: students/templates/students/course/list.html:3
+#: students/templates/students/course/list.html:6
+msgid "My courses"
+msgstr "我的课程"
 
 #: courses/templates/courses/content/file.html:3
 msgid "Download file"
-msgstr ""
+msgstr "下载文件"
 
 #: courses/templates/courses/course/detail.html:13
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: courses/templates/courses/course/detail.html:18
 #: courses/templates/courses/course/list.html:48
 #: courses/templates/courses/manage/module/content_list.html:12
+#: students/templates/students/course/detail.html:13
 msgid "Modules"
-msgstr ""
+msgstr "模块"
 
 #: courses/templates/courses/course/detail.html:19
 #: courses/templates/courses/course/list.html:49
 msgid "Instructor"
-msgstr ""
+msgstr "讲师"
 
 #: courses/templates/courses/course/detail.html:26
 msgid "Enroll now"
-msgstr ""
+msgstr "现在报名"
 
 #: courses/templates/courses/course/detail.html:30
 msgid "Register to enroll"
-msgstr ""
+msgstr "注册即可报名"
 
 #: courses/templates/courses/course/list.html:5
 #: courses/templates/courses/course/list.html:14
 #: courses/templates/courses/course/list.html:31
 msgid "courses"
-msgstr ""
+msgstr "培训班"
 
 #: courses/templates/courses/course/list.html:7
 #: courses/templates/courses/course/list.html:16
 msgid "All courses"
-msgstr ""
+msgstr "所有课程"
 
 #: courses/templates/courses/course/list.html:20
 msgid "Subjects"
-msgstr ""
+msgstr "科目"
 
 #: courses/templates/courses/course/list.html:23
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: courses/templates/courses/manage/content/form.html:5
 #: courses/templates/courses/manage/content/form.html:14
 msgid "Edit content"
-msgstr ""
+msgstr "编辑内容"
 
 #: courses/templates/courses/manage/content/form.html:7
 #: courses/templates/courses/manage/content/form.html:16
 #: courses/templates/courses/manage/module/content_list.html:51
 msgid "Add new content"
-msgstr ""
+msgstr "添加新内容"
 
 #: courses/templates/courses/manage/content/form.html:20
 #: courses/templates/courses/manage/course/form.html:20
 msgid "Course info"
-msgstr ""
+msgstr "课程信息"
 
 #: courses/templates/courses/manage/content/form.html:24
 msgid "Save content"
-msgstr ""
+msgstr "保存内容"
 
 #: courses/templates/courses/manage/course/delete.html:3
 #: courses/templates/courses/manage/course/delete.html:6
 msgid "Delete course"
-msgstr ""
+msgstr "删除课程"
 
 #: courses/templates/courses/manage/course/delete.html:10
 msgid "Are you sure you want to delete"
-msgstr ""
+msgstr "你确定你要删除"
 
 #: courses/templates/courses/manage/course/delete.html:11
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: courses/templates/courses/manage/course/form.html:5
 #: courses/templates/courses/manage/course/form.html:14
 msgid "Edit course"
-msgstr ""
+msgstr "编辑课程"
 
 #: courses/templates/courses/manage/course/form.html:7
 #: courses/templates/courses/manage/course/form.html:16
 msgid "Create a new course"
-msgstr ""
+msgstr "创建新课程"
 
 #: courses/templates/courses/manage/course/form.html:24
 msgid "Save course"
-msgstr ""
-
-#: courses/templates/courses/manage/course/list.html:3
-#: courses/templates/courses/manage/course/list.html:6
-msgid "My courses"
-msgstr ""
+msgstr "保存课程"
 
 #: courses/templates/courses/manage/course/list.html:12
 #: courses/templates/courses/manage/module/content_list.html:39
 #: courses/templates/courses/manage/module/formset.html:4
 #: courses/templates/courses/manage/module/formset.html:8
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: courses/templates/courses/manage/course/list.html:13
 #: courses/templates/courses/manage/module/content_list.html:42
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: courses/templates/courses/manage/course/list.html:14
 #: courses/templates/courses/manage/module/content_list.html:28
 msgid "Edit modules"
-msgstr ""
+msgstr "编辑模块"
 
 #: courses/templates/courses/manage/course/list.html:17
 msgid "Manage contents"
-msgstr ""
+msgstr "管理内容"
 
 #: courses/templates/courses/manage/course/list.html:23
 msgid "You haven't created any courses yet"
-msgstr ""
+msgstr "您还没有创建任何课程"
 
 #: courses/templates/courses/manage/course/list.html:26
 msgid "Create new course"
-msgstr ""
+msgstr "创建新课程"
 
 #: courses/templates/courses/manage/module/content_list.html:5
 #: courses/templates/courses/manage/module/content_list.html:18
 #: courses/templates/courses/manage/module/content_list.html:31
+#: students/templates/students/course/detail.html:19
 msgid "Module"
-msgstr ""
+msgstr "模块"
 
 #: courses/templates/courses/manage/module/content_list.html:10
 msgid "Course"
-msgstr ""
+msgstr "课程"
 
 #: courses/templates/courses/manage/module/content_list.html:25
+#: students/templates/students/course/detail.html:26
 msgid "No modules yet"
-msgstr ""
+msgstr "还没有模块"
 
 #: courses/templates/courses/manage/module/content_list.html:32
 msgid "Module contents"
-msgstr ""
+msgstr "模块内容"
 
 #: courses/templates/courses/manage/module/content_list.html:48
 msgid "This module has no contents yet"
-msgstr ""
+msgstr "该模块还没有内容"
 
 #: courses/templates/courses/manage/module/content_list.html:55
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: courses/templates/courses/manage/module/content_list.html:60
 msgid "Image"
-msgstr ""
+msgstr "图像"
 
 #: courses/templates/courses/manage/module/content_list.html:65
 msgid "Video"
-msgstr ""
+msgstr "视频"
 
 #: courses/templates/courses/manage/module/content_list.html:70
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: courses/templates/courses/manage/module/formset.html:10
 msgid "Course modules"
-msgstr ""
+msgstr "课程模块"
 
 #: courses/templates/courses/manage/module/formset.html:15
 msgid "Save modules"
-msgstr ""
+msgstr "保存模块"
 
 #: courses/templates/registration/logged_out.html:4
 #: courses/templates/registration/logged_out.html:7
 msgid "Logged out"
-msgstr ""
+msgstr "登出"
 
 #: courses/templates/registration/logged_out.html:10
 msgid "You have been successfully logged out"
-msgstr ""
+msgstr "您已成功退出"
 
 #: courses/templates/registration/logged_out.html:11
 msgid "You can"
-msgstr ""
+msgstr "你可以"
 
 #: courses/templates/registration/logged_out.html:11
 msgid "Log-in again"
-msgstr ""
+msgstr "再次登录"
 
 #: courses/templates/registration/login.html:4
 #: courses/templates/registration/login.html:7
+#: courses/templates/registration/login.html:19
 msgid "Log-in"
-msgstr ""
+msgstr "登录"
 
 #: courses/templates/registration/login.html:10
 msgid "Your username and password didn't match. Please try again"
-msgstr ""
+msgstr "您的用户名和密码不匹配。请再试一次"
 
 #: courses/templates/registration/login.html:12
 msgid "Please, use the following form to log-in"
-msgstr ""
+msgstr "请使用以下表格登录"
+
+#: students/templates/students/course/detail.html:31
+msgid "Course chat room"
+msgstr "课程聊天室"
+
+#: students/templates/students/course/list.html:12
+#| msgid "Manage contents"
+msgid "Access contents"
+msgstr "访问内容"
+
+#: students/templates/students/course/list.html:17
+#| msgid "You haven't created any courses yet"
+msgid "You are not enrolled in any courses yet"
+msgstr "您还没有注册任何课程"
+
+#: students/templates/students/course/list.html:18
+#| msgid "My courses"
+msgid "Browse courses"
+msgstr "浏览课程"
+
+#: students/templates/students/course/list.html:19
+msgid "to enroll on a course"
+msgstr "注册课程"
+
+#: students/templates/students/student/registration.html:9
+#| msgid "Sign out"
+msgid "Sign up"
+msgstr "报名"
+
+#: students/templates/students/student/registration.html:12
+msgid "Enter your details to create an account"
+msgstr "输入您的详细信息以创建帐户"
+
+#: students/templates/students/student/registration.html:17
+#| msgid "Create new course"
+msgid "Create my account"
+msgstr "创建我的账户"

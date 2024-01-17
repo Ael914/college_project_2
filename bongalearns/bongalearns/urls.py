@@ -23,7 +23,6 @@ from django.conf.urls.i18n import i18n_patterns
 from courses.views import CourseListView
 
 urlpatterns = i18n_patterns(
-    path("__debug__/", include("debug_toolbar.urls")),
     path("accounts/login/", auth_views.LoginView.as_view(), name="login"),
     path("accounts/logout/", auth_views.LogoutView.as_view(), name="logout"),
     path("admin/", admin.site.urls),

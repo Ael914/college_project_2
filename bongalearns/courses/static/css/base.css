@@ -337,7 +337,7 @@ ul#course-modules li:hover {
     float:right;
     margin: 0;
     padding: 0;
-    padding-right: 24px;
+    padding-right: 22px;
 }
 
 .languages ul {
@@ -361,4 +361,10 @@ ul#course-modules li:hover {
     padding-top: 4px;
     width:22px;
     height: 14px;
+}
+.available_courses{
+    float:right;
+    margin: 0;
+    padding: 0;
+    padding-right: 22px;
 }

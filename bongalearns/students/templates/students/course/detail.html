@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load cache %}
-
+{% load i18n %}
 {% block title %}
     {{ object.title }}
 {% endblock %}
@@ -10,25 +10,25 @@
         {{ module.title }}
     </h1>
     <div class="contents">
-        <h3>Modules</h3>
+        <h3>{% trans "Modules" %}</h3>
         <ul id="modules">
             {% for m in object.modules.all %}
                 <li data-id="{{ m.id }}" {% if m == module %}class="selected"{% endif %}>
                     <a href="{% url 'student_course_detail_module' object.id m.id %}">
                         <span>
-                            Module <span class="order">{{ m.order|add:1 }}</span>
+                            {% trans "Module" %} <span class="order">{{ m.order|add:1 }}</span>
                         </span>
                         <br>
                         {{ m.title }}
                     </a>
                 </li>
             {% empty %}
-                <li>No modules yet.</li>
+                <li>{% trans "No modules yet" %}.</li>
             {% endfor %}
         </ul>
         <h3>
             <a href="{% url 'chat:course_chat_room' object.id %}">
-                Course chat room
+                {% trans "Course chat room" %}
             </a>
         </h3>
     </div>

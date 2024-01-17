@@ -23,11 +23,7 @@
             <li><a href="{% url 'login' %}">{% trans "Sign in" %}</a></li>
             {% endif %}
         </ul>
-        <div>
-            {% if request.user|has_group:"Teachers"%}
-            <a href="{% url 'manage_course_list' %}">Писька</a>
-            {% endif %}
-        </div>
+        
         <div class="languages">
             <p>{% trans "Language" %}:</p>
             <ul class="languages">
@@ -46,6 +42,13 @@
                     </li>
                 {% endfor %}
             </ul>
+        </div>
+        <div class="available_courses">
+            {% if request.user|has_group:"Teachers"%}
+            <a href="{% url 'manage_course_list' %}">{% trans "Manage courses" %}</a>
+            {% else  %}
+            <a href="{% url 'student_course_list' %}">{% trans "My courses" %}</a>
+            {% endif %}
         </div>
         
     </div>

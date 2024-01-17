@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 02:57+0000\n"
+"POT-Creation-Date: 2024-01-17 04:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: bongalearns/settings.py:147
+#: bongalearns/settings.py:149
 msgid "English"
 msgstr ""
 
-#: bongalearns/settings.py:147
+#: bongalearns/settings.py:149
 msgid "Russian"
 msgstr ""
 
-#: bongalearns/settings.py:147
+#: bongalearns/settings.py:149
 msgid "Chinese"
 msgstr ""
 
@@ -55,20 +55,32 @@ msgstr ""
 msgid "content"
 msgstr ""
 
-#: courses/templates/base.html:8 courses/templates/base.html:14
+#: courses/templates/base.html:9 courses/templates/base.html:15
 msgid "Bonga Learns"
 msgstr ""
 
-#: courses/templates/base.html:20
+#: courses/templates/base.html:21
 msgid "Sign out"
 msgstr ""
 
-#: courses/templates/base.html:22
+#: courses/templates/base.html:23
 msgid "Sign in"
 msgstr ""
 
-#: courses/templates/base.html:26
+#: courses/templates/base.html:28
 msgid "Language"
+msgstr ""
+
+#: courses/templates/base.html:48
+msgid "Manage courses"
+msgstr ""
+
+#: courses/templates/base.html:50
+#: courses/templates/courses/manage/course/list.html:3
+#: courses/templates/courses/manage/course/list.html:6
+#: students/templates/students/course/list.html:3
+#: students/templates/students/course/list.html:6
+msgid "My courses"
 msgstr ""
 
 #: courses/templates/courses/content/file.html:3
@@ -82,6 +94,7 @@ msgstr ""
 #: courses/templates/courses/course/detail.html:18
 #: courses/templates/courses/course/list.html:48
 #: courses/templates/courses/manage/module/content_list.html:12
+#: students/templates/students/course/detail.html:13
 msgid "Modules"
 msgstr ""
 
@@ -164,11 +177,6 @@ msgstr ""
 msgid "Save course"
 msgstr ""
 
-#: courses/templates/courses/manage/course/list.html:3
-#: courses/templates/courses/manage/course/list.html:6
-msgid "My courses"
-msgstr ""
-
 #: courses/templates/courses/manage/course/list.html:12
 #: courses/templates/courses/manage/module/content_list.html:39
 #: courses/templates/courses/manage/module/formset.html:4
@@ -201,6 +209,7 @@ msgstr ""
 #: courses/templates/courses/manage/module/content_list.html:5
 #: courses/templates/courses/manage/module/content_list.html:18
 #: courses/templates/courses/manage/module/content_list.html:31
+#: students/templates/students/course/detail.html:19
 msgid "Module"
 msgstr ""
 
@@ -209,6 +218,7 @@ msgid "Course"
 msgstr ""
 
 #: courses/templates/courses/manage/module/content_list.html:25
+#: students/templates/students/course/detail.html:26
 msgid "No modules yet"
 msgstr ""
 
@@ -263,6 +273,7 @@ msgstr ""
 
 #: courses/templates/registration/login.html:4
 #: courses/templates/registration/login.html:7
+#: courses/templates/registration/login.html:19
 msgid "Log-in"
 msgstr ""
 
@@ -272,4 +283,36 @@ msgstr ""
 
 #: courses/templates/registration/login.html:12
 msgid "Please, use the following form to log-in"
+msgstr ""
+
+#: students/templates/students/course/detail.html:31
+msgid "Course chat room"
+msgstr ""
+
+#: students/templates/students/course/list.html:12
+msgid "Access contents"
+msgstr ""
+
+#: students/templates/students/course/list.html:17
+msgid "You are not enrolled in any courses yet"
+msgstr ""
+
+#: students/templates/students/course/list.html:18
+msgid "Browse courses"
+msgstr ""
+
+#: students/templates/students/course/list.html:19
+msgid "to enroll on a course"
+msgstr ""
+
+#: students/templates/students/student/registration.html:9
+msgid "Sign up"
+msgstr ""
+
+#: students/templates/students/student/registration.html:12
+msgid "Enter your details to create an account"
+msgstr ""
+
+#: students/templates/students/student/registration.html:17
+msgid "Create my account"
 msgstr ""
