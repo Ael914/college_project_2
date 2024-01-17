@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 04:12+0000\n"
+"POT-Creation-Date: 2024-01-17 02:57+0000\n"
 "PO-Revision-Date: 2024-01-16 03:51+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,15 +21,15 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "English"
 msgstr "Аглийский"
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "Russian"
 msgstr "Великорусский"
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "Chinese"
 msgstr "Нипанимать хазяина"
 
@@ -62,17 +62,17 @@ msgstr "содержание"
 msgid "Bonga Learns"
 msgstr ""
 
-#: courses/templates/base.html:19
-msgid "Language"
-msgstr ""
-
-#: courses/templates/base.html:33
+#: courses/templates/base.html:20
 msgid "Sign out"
 msgstr "Выйти из аккаунта"
 
-#: courses/templates/base.html:35
+#: courses/templates/base.html:22
 msgid "Sign in"
 msgstr "Войти в аккаунт"
+
+#: courses/templates/base.html:26
+msgid "Language"
+msgstr ""
 
 #: courses/templates/courses/content/file.html:3
 msgid "Download file"

@@ -28,7 +28,9 @@ SECRET_KEY = "django-insecure-5xpa@a#fx+)r87a@o=f8pptg5(713y0)bq_=^e98#x)ajueug9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -144,7 +146,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en"
 
 LANGUAGES = [
-    ('en', _('English')),('ru', _('Russian')),('zh-cn', _('Chinese')),
+    ('en', _('English')),('ru', _('Russian')),('zh-hans', _('Chinese')),
 ]
 
 LOCALE_PATHS = [

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 04:12+0000\n"
+"POT-Creation-Date: 2024-01-17 02:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "English"
 msgstr ""
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "Russian"
 msgstr ""
 
-#: bongalearns/settings.py:149
+#: bongalearns/settings.py:147
 msgid "Chinese"
 msgstr ""
 
@@ -59,16 +59,16 @@ msgstr ""
 msgid "Bonga Learns"
 msgstr ""
 
-#: courses/templates/base.html:19
-msgid "Language"
-msgstr ""
-
-#: courses/templates/base.html:33
+#: courses/templates/base.html:20
 msgid "Sign out"
 msgstr ""
 
-#: courses/templates/base.html:35
+#: courses/templates/base.html:22
 msgid "Sign in"
+msgstr ""
+
+#: courses/templates/base.html:26
+msgid "Language"
 msgstr ""
 
 #: courses/templates/courses/content/file.html:3
