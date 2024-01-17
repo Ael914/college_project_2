@@ -6,120 +6,120 @@
 {% endblock %}
 
 {% block content %}
-    {% with course=module.course %}
-        <h1>{% trans "Course" %} "{{ course.title }}"</h1>
-        <div class="contents">
-            <h3>{% trans "Modules" %}</h3>
-            <ul id="modules">
-                {% for m in course.modules.all %}
-                    <li data-id="{{ m.id }}" {% if m == module %} class="selected"{% endif %}>
-                        <a href="{% url 'module_content_list' m.id %}">
-                            <span>
-                                {% trans "Module" %} <span class="order">{{ m.order|add:1 }}</span>
-                            </span>
-                            <br>
-                            {{ m.title }}
-                        </a>
-                    </li>
-                {% empty %}
-                    <li>{% trans "No modules yet" %}.</li>
-                {% endfor %}
-            </ul>
-            <p><a href="{% url 'course_module_update' course.id %}">{% trans "Edit modules" %}</a></p>
+{% with course=module.course %}
+<h1>{% trans "Course" %} "{{ course.title }}"</h1>
+<div class="contents">
+    <h3>{% trans "Modules" %}</h3>
+    <ul id="modules">
+        {% for m in course.modules.all %}
+        <li data-id="{{ m.id }}" {% if m == module %} class="selected" {% endif %}>
+            <a href="{% url 'module_content_list' m.id %}">
+                <span>
+                    {% trans "Module" %} <span class="order">{{ m.order|add:1 }}</span>
+                </span>
+                <br>
+                {{ m.title }}
+            </a>
+        </li>
+        {% empty %}
+        <li>{% trans "No modules yet" %}.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'course_module_update' course.id %}">{% trans "Edit modules" %}</a></p>
+</div>
+<div class="module">
+    <h2>{% trans "Module" %} {{ module.order|add:1 }}: {{ module.title }}</h2>
+    <h3>{% trans "Module contents" %}:</h3>
+    <div id="module-contents">
+        {% for content in module.contents.all %}
+        <div data-id="{{ content.id }}">
+            {% with item=content.item %}
+            <p>{{ item }} ({{ item|model_name }})</p>
+            <a href="{% url 'module_content_update' module.id item|model_name item.id %}">
+                {% trans "Edit" %}
+            </a>
+            <form action="{% url 'module_content_delete' content.id %}" method="post">
+                <input type="submit" value="{% trans 'Delete' %}">
+                {% csrf_token %}
+            </form>
+            {% endwith %}
         </div>
-        <div class="module">
-            <h2>{% trans "Module" %} {{ module.order|add:1 }}: {{ module.title }}</h2>
-            <h3>{% trans "Module contents" %}:</h3>
-            <div id="module-contents">
-                {% for content in module.contents.all %}
-                    <div data-id="{{ content.id }}">
-                        {% with item=content.item %}
-                            <p>{{ item }} ({{ item|model_name }})</p>
-                            <a href="{% url 'module_content_update' module.id item|model_name item.id %}">
-                                {% trans "Edit" %}
-                            </a>
-                            <form action="{% url 'module_content_delete' content.id %}" method="post">
-                                <input type="submit" value="{% trans 'Delete' %}">
-                                {% csrf_token %}
-                            </form>
-                        {% endwith %}
-                    </div>
-                {% empty %}
-                    <p>{% trans "This module has no contents yet" %}.</p>
-                {% endfor %}
-            </div>
-            <h3>{% trans "Add new content" %}:</h3>
-            <ul class="content-types">
-                <li>
-                    <a href="{% url 'module_content_create' module.id 'text' %}">
-                        {% trans "Text" %}
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'module_content_create' module.id 'image' %}">
-                        {% trans "Image" %}
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'module_content_create' module.id 'video' %}">
-                        {% trans "Video" %}
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'module_content_create' module.id 'file' %}">
-                        {% trans "File" %}
-                    </a>
-                </li>
-            </ul>
-        </div>
-    {% endwith %}
+        {% empty %}
+        <p>{% trans "This module has no contents yet" %}.</p>
+        {% endfor %}
+    </div>
+    <h3>{% trans "Add new content" %}:</h3>
+    <ul class="content-types">
+        <li>
+            <a href="{% url 'module_content_create' module.id 'text' %}">
+                {% trans "Text" %}
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'module_content_create' module.id 'image' %}">
+                {% trans "Image" %}
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'module_content_create' module.id 'video' %}">
+                {% trans "Video" %}
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'module_content_create' module.id 'file' %}">
+                {% trans "File" %}
+            </a>
+        </li>
+    </ul>
+</div>
+{% endwith %}
 {% endblock %}
 
 {% block include_js %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5sortable/0.13.3/html5sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5sortable/0.13.3/html5sortable.min.js"></script>
 {% endblock %}
 
 {% block domready %}
-    var options = {
-        method: "POST",
-        mode: "same-origin"
-    }
-    const moduleOrderUrl = "{% url 'module_order' %}";
+var options = {
+method: "POST",
+mode: "same-origin"
+}
+const moduleOrderUrl = "{% url 'module_order' %}";
 
-    sortable("#modules", {
-        forcePlaceholderSize: true,
-        placeholderClass: "placeholder"
-    })[0].addEventListener('sortupdate', function(e) {
-        modulesOrder = {};
-        var modules = document.querySelectorAll("#modules li");
-        modules.forEach(function (module, index) {
-            // обновить индекс модуля
-            modulesOrder[module.dataset.id] = index
-            // обновить индекс в HTML-элементе
-            module.querySelector(".order").innerHTML = index + 1;
-            // добавить новый порядок в опции HTTP-запроса
-            options['body'] = JSON.stringify(modulesOrder);
+sortable("#modules", {
+forcePlaceholderSize: true,
+placeholderClass: "placeholder"
+})[0].addEventListener('sortupdate', function(e) {
+modulesOrder = {};
+var modules = document.querySelectorAll("#modules li");
+modules.forEach(function (module, index) {
+// обновить индекс модуля
+modulesOrder[module.dataset.id] = index
+// обновить индекс в HTML-элементе
+module.querySelector(".order").innerHTML = index + 1;
+// добавить новый порядок в опции HTTP-запроса
+options['body'] = JSON.stringify(modulesOrder);
 
-            // отправить HTTP-запрос
-            fetch(moduleOrderUrl, options)
-        });
-    });
+// отправить HTTP-запрос
+fetch(moduleOrderUrl, options)
+});
+});
 
-    const contentOrderUrl = "{% url 'content_order' %}";
-    sortable("#module-contents", {
-        forcePlaceholderSize: true,
-        placeholderClass: "placehloder"
-    })[0].addEventListener("sortupdate", function(e) {
-        contentOrder = {};
-        var contents = document.querySelectorAll("#module-contents div");
-        contents.forEach(function (content, index) {
-            // обновить индекс контента
-            contentOrder[content.dataset.id] = index;
-            // добавить новый порядок в опции HTTP-запроса
-            options['body'] = JSON.stringify(contentOrder);
+const contentOrderUrl = "{% url 'content_order' %}";
+sortable("#module-contents", {
+forcePlaceholderSize: true,
+placeholderClass: "placehloder"
+})[0].addEventListener("sortupdate", function(e) {
+contentOrder = {};
+var contents = document.querySelectorAll("#module-contents div");
+contents.forEach(function (content, index) {
+// обновить индекс контента
+contentOrder[content.dataset.id] = index;
+// добавить новый порядок в опции HTTP-запроса
+options['body'] = JSON.stringify(contentOrder);
 
-            // отправить HTTP-запрос
-            fetch(contentOrderUrl, options)
-        });
-    });
+// отправить HTTP-запрос
+fetch(contentOrderUrl, options)
+});
+});
 {% endblock %}

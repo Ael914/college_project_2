@@ -10,7 +10,6 @@ from django.views.generic.base import TemplateResponseMixin, View
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
-
 from students.forms import CourseEnrollForm
 
 from .forms import ModuleFormSet

@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 
 from django.urls import reverse_lazy
-
 from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,16 +28,16 @@ SECRET_KEY = "django-insecure-5xpa@a#fx+)r87a@o=f8pptg5(713y0)bq_=^e98#x)ajueug9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CSRF_COOKIE_DOMAIN = ".example.com"
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
 INSTALLED_APPS = [
     "daphne",
     "courses.apps.CoursesConfig",
+    "super_inlines",
+    "modeltranslation",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -146,12 +146,18 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en"
 
 LANGUAGES = [
-    ('en', _('English')),('ru', _('Russian')),('zh-hans', _('Chinese')),
+    ("en", _("English")),
+    ("ru", _("Russian")),
+    ("zh-hans", _("Chinese")),
 ]
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale',
+    BASE_DIR / "locale",
 ]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
+
+USE_I18N = True
 
 TIME_ZONE = "UTC"
 

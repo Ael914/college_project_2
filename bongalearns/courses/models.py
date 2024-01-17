@@ -4,12 +4,13 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.template.loader import render_to_string
 from django.utils.translation import gettext_lazy as _
+
 from .fields import OrderField
 
 
 # Create your models here.
 class Subject(models.Model):
-    title = models.CharField(_("title"),max_length=200)
+    title = models.CharField(_("title"), max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
@@ -26,10 +27,12 @@ class Course(models.Model):
     subject = models.ForeignKey(
         Subject, related_name="courses", on_delete=models.CASCADE
     )
-    title = models.CharField(_("title"),max_length=200)
+    title = models.CharField(_("title"), max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
-    overview = models.TextField(_("overview"),)
-    created = models.DateTimeField(_("created"),auto_now_add=True)
+    overview = models.TextField(
+        _("overview"),
+    )
+    created = models.DateTimeField(_("created"), auto_now_add=True)
     students = models.ManyToManyField(User, related_name="courses_joined", blank=True)
 
     class Meta:
@@ -41,8 +44,8 @@ class Course(models.Model):
 
 class Module(models.Model):
     course = models.ForeignKey(Course, related_name="modules", on_delete=models.CASCADE)
-    title = models.CharField(_("title"),max_length=200)
-    description = models.TextField(_("description"),blank=True)
+    title = models.CharField(_("title"), max_length=200)
+    description = models.TextField(_("description"), blank=True)
     order = OrderField(blank=True, for_fields=["course"])
 
     class Meta:
@@ -80,9 +83,9 @@ class ItemBase(models.Model):
     owner = models.ForeignKey(
         User, related_name="%(class)s_related", on_delete=models.CASCADE
     )
-    title = models.CharField(_("title"),max_length=200)
-    created = models.DateTimeField(_("created"),auto_now_add=True)
-    updated = models.DateTimeField(_("updated"),auto_now=True)
+    title = models.CharField(_("title"), max_length=200)
+    created = models.DateTimeField("created", auto_now_add=True)
+    updated = models.DateTimeField("updated", auto_now=True)
 
     class Meta:
         abstract = True
@@ -98,7 +101,9 @@ class ItemBase(models.Model):
 
 
 class Text(ItemBase):
-    content = models.TextField(_("content"), )
+    content = models.TextField(
+        _("content"),
+    )
 
 
 class File(ItemBase):

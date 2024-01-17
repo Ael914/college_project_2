@@ -1,4 +1,5 @@
 from typing import Any
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 

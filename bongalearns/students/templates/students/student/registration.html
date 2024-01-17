@@ -2,20 +2,20 @@
 {% load i18n %}
 
 {% block title %}
-{% Trans "Sign up" %}
+{% trans "Sign up" %}
 {% endblock %}
 
 {% block content %}
-    <h1>
-        {% trans "Sign up" %}
-    </h1>
-    <div class="module">
-        <p>{% trans "Enter your details to create an account" %}:</p>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-           
-            <p><input type="submit" value="{% trans 'Create my account' %}"></p>
-        </form>
-    </div>
+<h1>
+    {% trans "Sign up" %}
+</h1>
+<div class="module">
+    <p>{% trans "Enter your details to create an account" %}:</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <p><input type="submit" value="{% trans 'Create my account' %}"></p>
+    </form>
+</div>
 {% endblock %}
