@@ -25,14 +25,14 @@ class SubjectDetailView(generics.RetrieveAPIView):
     serializer_class = SubjectSerializer
 
 
-# class CourseEnrollView(APIView):
-#     authentication_classes = [BasicAuthentication]
-#     permission_classes = [IsAuthenticated]
+class CourseEnrollView(APIView):
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
-#     def post(self, request, pk, format=None):
-#         course = get_object_or_404(Course, pk=pk)
-#         course.students.add(request.user)
-#         return Response({"enrolled": True})
+    def post(self, request, pk, format=None):
+        course = get_object_or_404(Course, pk=pk)
+        course.students.add(request.user)
+        return Response({"enrolled": True})
 
 
 class CourseViewSet(viewsets.ReadOnlyModelViewSet):

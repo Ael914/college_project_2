@@ -5,7 +5,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #efefef;
+    color: #efefef;;
 }
 
 a {
@@ -370,4 +370,18 @@ ul#course-modules li:hover {
     margin: 0;
     padding: 0;
     padding-right: 10px;
+}
+#chinese_head{
+        background-image: url("/static/img/Bebra.png");
+}
+.social_networks{
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+.social_networks a img{
+    padding-top: 4px;
+    width: 22px;
+    height: 22px;
 }

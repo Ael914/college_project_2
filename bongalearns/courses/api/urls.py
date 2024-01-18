@@ -19,10 +19,11 @@ urlpatterns = [
         views.SubjectDetailView.as_view(),
         name="subject_detail",
     ),
-    # path(
-    #     "courses/<pk>/enroll/",
-    #     views.CourseEnrollView.as_view(),
-    #     name="course_enroll",
-    # ),
+    path(
+        "courses/<pk>/enroll/",
+        views.CourseEnrollView.as_view(),
+        name="course_enroll",
+    ),
+    # path("courses/<string:subject>/",views.yes.as_view()),
     path("", include(router.urls)),
 ]
