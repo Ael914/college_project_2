@@ -14,9 +14,13 @@
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
 <body id="{% if LANGUAGE_CODE == 'zh-hans' %}chinese_head{% endif %}">
-
+    {% if LANGUAGE_CODE == 'en' %}
+    <audio autoplay id="audio">
+        <source src="{% static '/audio/burger.mp3' %}" type="audio/mpeg" />
+    </audio>
+    {% endif %}
     <div id="header"> 
-        <a href="/{{ LANGUAGE_CODE }}/" class="logo">{% trans "Bonga Learns" %}</a>
+        <a href="/{{ LANGUAGE_CODE }}/" class="logo">{% trans "Bonga Learns" %}  </a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
             <li><a href="{% url 'logout' %}">{% trans "Sign out" %}</a></li>
@@ -30,14 +34,13 @@
             <ul class="languages">
                 {% for language in languages %}
                 <li>
-                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"
-                        {% endif %}>
+                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected" {% endif %}>
                         {% if language.code == "zh-hans" %}
                         <img src="{% static 'img/China.png' %}" />
                         {% elif language.code == "ru" %}
                         <img src="{% static 'img/Russia.png' %}" />
                         {% elif language.code == "en" %}
-                        <img src="{% static 'img/Britain.png' %}" />
+                        <img src="{% static 'img/Britain.png' %}"/>
                         {% endif %}
                     </a>
                 </li>
