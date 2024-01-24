@@ -13,19 +13,19 @@
     {% if subject %}
     {{ subject.title }} {% trans "courses" %}
     {% else %}
-    {% trans "All courses" %}
+    {% trans "All courses"   %} 
     {% endif %}
 </h1>
 <div class="contents">
-    <h3>{% trans "Subjects" %}</h3>
+    <h3>{% trans "Subjects" %} </h3>
     <ul id="modules">
         <li {% if not subject %}class="selected" {% endif %}>
-            <a href="{% url 'course_list' %}">{% trans "All" %}</a>
+            <a href="{% url 'course_list' %}">&#129518;{% trans "All" %} </a>
         </li>
         {% for s in subjects %}
         <li {% if subject == s %}class="selected" {% endif %}>
             <a href="{% url 'course_list_subject' s.slug %}">
-                {{ s.title }}
+                &#128196; {{ s.title }}	
                 <br>
                 <span>
                     {% trans "courses" %}: {{ s.total_courses }}
@@ -51,4 +51,5 @@
     {% endwith %}
     {% endfor %}
 </div>
+
 {% endblock %}
