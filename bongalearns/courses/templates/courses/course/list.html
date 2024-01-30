@@ -17,25 +17,51 @@
     {% endif %}
 </h1>
 <div class="contents">
-    <h3>{% trans "Subjects" %} </h3>
-    <ul id="modules">
-        <li {% if not subject %}class="selected" {% endif %}>
-            <a href="{% url 'course_list' %}">&#129518;{% trans "All" %} </a>
-        </li>
-        {% for s in subjects %}
-        <li {% if subject == s %}class="selected" {% endif %}>
-            <a href="{% url 'course_list_subject' s.slug %}">
-                &#128196; {{ s.title }}	
-                <br>
-                <span>
-                    {% trans "courses" %}: {{ s.total_courses }}
-                </span>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          
+          <ul id="menu">
+            <li id="li_subjects">
+                {% trans "Subjects" %}
+            </li>
+            <li {% if not subject %}class="selected" {% endif %}>
+                <a href="{% url 'course_list' %}">&#129518;{% trans "All" %} </a>
+            </li>
+            {% for s in subjects %}
+            <li {% if subject == s %}class="selected" {% endif %}>
+                <a href="{% url 'course_list_subject' s.slug %}">
+                    &#128196; {{ s.title }}	
+                    <br>
+               
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
+      </nav>
+
 </div>
-<div class="module">
+<div class="module_left">
     {% for course in courses %}
     {% with subject=course.subject %}
     <h3>
